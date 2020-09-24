@@ -227,9 +227,18 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -277,76 +286,8 @@
                     <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
                     </div>
                 </div>
-                </div>
-        </div>
-
-        <!-- <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-8 offset-sm-2">
-                <div class="cards" id="reserveTable">
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group row">
-                                <label for="guest" class="col-sm-2 col-form-label"><strong>Number of Guests</strong></label>
-                                <div class="col-sm-10">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" 
-                                        name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                        <label class="form-check-label" for="inlineRadio1">1</label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" 
-                                        name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                        <label class="form-check-label" for="inlineRadio2">2</label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" 
-                                        name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                        <label class="form-check-label" for="inlineRadio3">3</label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" 
-                                        name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                                        <label class="form-check-label" for="inlineRadio4">4</label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" 
-                                        name="inlineRadioOptions" id="inlineRadio5" value="option5">
-                                        <label class="form-check-label" for="inlineRadio5">5</label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" 
-                                        name="inlineRadioOptions" id="inlineRadio6" value="option6">
-                                        <label class="form-check-label" for="inlineRadio6">6</label>
-                                      </div>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group row">
-                                <label for="datetime" class="col-sm-2 col-form-label"><strong>Date and Time</strong></label>
-                                <div class="col-12 col-sm-4">
-                                    <input type="date" class="form-control" id="date" 
-                        name="date" placeholder="Date">
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <input type="time" class="form-control" id="time" 
-                        name="time" placeholder="time">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <div class="col-sm-10 offset-md-2">
-                                    <button type="submit" class="btn btn-primary">Reserve</button>
-                                </div>
-                            </div>
-
-                        </form>
-                    </div>
-                   
-                </div>
             </div>
-        </div> -->
-        
+        </div>        
     </div>
 
     <footer class="footer">
@@ -394,5 +335,16 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>   
+    <script>
+        $(document).ready(function() {
+            $('#mycarousel').carousel( {interval : 2000} );
+            $('#carousel-pause').click(function(){
+                $('#mycarousel').carousel('pause');
+            });
+            $('#carousel-play').click(function(){
+                $('#mycarousel').carousel('cycle');
+            });
+        })
+    </script>
 </body>
 </html>
