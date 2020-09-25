@@ -52,3 +52,12 @@ body {
   position: absolute;
   bottom: 0px;
   z-index: 1; }
+
+.modal-header {
+  background-color: #2d35a8;
+  color: aliceblue; }
+  .modal-header .cross {
+    color: aliceblue; }
+
+.modal-body {
+  background: #c6c4e9; }

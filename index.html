@@ -33,7 +33,7 @@
                     <li class="nav-item"><a href="./contactus.html" class="nav-link"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a type="button" data-toggle="modal" data-target="#loginModal">
+                    <a type="button" id="login">
                         <span class="fa fa-sign-in"></span>
                         Login
                     </a>
@@ -48,7 +48,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login </h4>
-                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                    <button class="close" type="button" data-dismiss="modal"><span class="cross">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -86,7 +86,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                    <button class="close" type="button" data-dismiss="modal"><span class="cross">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -177,8 +177,7 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <a role="button" class="btn btn-warning nav-link btn-block"
-                     href="#Reservetable" data-toggle="modal"
-                     data-target="#reserveModal"
+                     id="tableReserve"
                      data-placement="bottom">Reserve Table</a>
                 </div>
             </div>
@@ -344,6 +343,12 @@
                     $('#carouselButton').children('span').removeClass('fa-play');
                     $('#carouselButton').children('span').addClass('fa-pause');
                }
+            });
+            $('#tableReserve').click(function(){
+                $('#reserveModal').modal('show');
+            });
+            $('#login').click(function(){
+                $('#loginModal').modal('show');
             });
         });
     </script>
