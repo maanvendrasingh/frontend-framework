@@ -7,4 +7,4 @@ In this, created a resturant website, hosted locally, using technologies like:-
   <li>HTML5</li>
   <li>JSON</li>
   <li>Node.js npm package manager</li>
-To run the code simply pull request the repo on your system (<em>assuming you have previously installed node and npm</em> ) simply<b>npm run<b>
+To run the code simply pull request the repo on your system (<em>assuming you have previously installed node and npm</em> ) simply <b>npm run<b>
